@@ -15,3 +15,7 @@ app.add_middleware(
 @app.get("/api/hello")
 async def hello():
     return {"message": "Hello from FastAPI!"}
+
+@app.post("/chat")
+async def chat(message: dict):
+    return {"message": message.get("message")}
