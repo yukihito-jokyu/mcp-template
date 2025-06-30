@@ -1,1 +1,1 @@
-# web-app-template
+# mcp-template
