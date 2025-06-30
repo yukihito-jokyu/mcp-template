@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from self_mcp.app import MultiMCPManager
+
+clients = MultiMCPManager()
 
 app = FastAPI()
 
@@ -18,4 +21,6 @@ async def hello():
 
 @app.post("/chat")
 async def chat(message: dict):
-    return {"message": message.get("message")}
+    await clients.get_tool_list()
+    results = await clients.process_message(message.get("message"), [])
+    return {"message": results[-1][-1]["content"]}
