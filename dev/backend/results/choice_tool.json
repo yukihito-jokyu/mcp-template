@@ -1,0 +1,76 @@
+{
+  "id": "chatcmpl-BqLAMIfo0W8sIZj3j0SaoDUbKGXwM",
+  "choices": [
+    {
+      "finish_reason": "tool_calls",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": null,
+        "refusal": null,
+        "role": "assistant",
+        "annotations": [],
+        "audio": null,
+        "function_call": null,
+        "tool_calls": [
+          {
+            "id": "call_depiEIqlvkIdv7hDAKsZVKZT",
+            "function": {
+              "arguments": "{\"title\":\"mcpについて\",\"owner\":\"yukihito-jokyu\",\"repo\":\"mcp-template\"}",
+              "name": "create_issue"
+            },
+            "type": "function"
+          }
+        ]
+      },
+      "content_filter_results": {}
+    }
+  ],
+  "created": 1751814118,
+  "model": "gpt-4o-mini-2024-07-18",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": "fp_efad92c60b",
+  "usage": {
+    "completion_tokens": 33,
+    "prompt_tokens": 6491,
+    "total_tokens": 6524,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 6400
+    }
+  },
+  "prompt_filter_results": [
+    {
+      "prompt_index": 0,
+      "content_filter_results": {
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        }
+      }
+    }
+  ]
+}
